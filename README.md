@@ -11,4 +11,6 @@ http://tomrandle.github.io/times-tables/
 - Refactor html / css
 - Scoresheets
 - Choose difficults
-- Different success / error messages 
+- Different success / error messages
+- Meta data / share
+- 
