@@ -44,7 +44,7 @@ window.onload = function() {
         self.multipleA = ko.observable(a);
         self.multipleB = ko.observable(b);
         self.answer = ko.observable();
-        self.answerS = ko.observable(answerString);
+        self.answerS = ko.observable();
         self.verdict = ko.observable();
 
 
@@ -74,6 +74,7 @@ window.onload = function() {
                 } 
 
                 else {
+                    self.answerS(answerString);
                     self.verdict('falseAnswer visible');
                 }
 

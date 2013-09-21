@@ -13,4 +13,4 @@ http://tomrandle.github.io/times-tables/
 - Choose difficults
 - Different success / error messages
 - Meta data / share
-- 
+- Names / store scores
