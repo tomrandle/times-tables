@@ -10,6 +10,7 @@ window.onload = function() {
     var timetableLimit = 12;
     var a;
     var b;
+    var answerString;
 
     function randomNumber(x) {
         return Math.floor(Math.random() * (x + 1));
@@ -18,6 +19,7 @@ window.onload = function() {
     function generateNumbers(x) {
         a = randomNumber(x);
         b = randomNumber(x);
+        answerString = a + " x " + b + " = " + (a * b);
     }
 
     generateNumbers(timetableLimit);
@@ -38,6 +40,7 @@ window.onload = function() {
         self.multipleA = ko.observable(a);
         self.multipleB = ko.observable(b);
         self.answer = ko.observable();
+        self.answerS = ko.observable(answerString);
         self.verdict = ko.observable();
 
 
@@ -82,6 +85,7 @@ window.onload = function() {
                     self.questionCount(questions);
 
                     self.answer('');
+
                 }, 1500);
 
             }
