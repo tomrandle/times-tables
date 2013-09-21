@@ -2,40 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>HTML5 boilerplate – all you really need…</title>
+    <title>Times Tables</title>
     <link rel="stylesheet" href="css/style.css">
     
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
-        <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.0.js"></script>
+	<link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
 
+
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.0.js"></script>
     <script src="js/main.js"></script>
-
-
-
 
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-
 <body id="home">
 
-<div class="question centered">
-    <p> <span data-bind="text: multipleA">a</span> x <span data-bind="text: multipleB">b</span> =
-        <input type="text" data-bind="value: answer, valueUpdate: 'afterkeydown'">
-    </p>
-</div>
-<div data-bind="css: verdict" class="message centered">
-    <div class="animated fadeIn correct">
-        <p>Correct</p>
-    </div>
-    <div class="animated fadeIn false">
-        <p>False</p>
-    </div>
-</div>
-<div class="score"> <span data-bind="text: correctCount"></span> / <span data-bind="text: questionCount"></span>
+	<div class="question centered">
+	    <p> <span data-bind="text: multipleA">a</span> x <span data-bind="text: multipleB">b</span> =
+	        <input id="answer-box" type="text" data-bind="value: answer, valueUpdate: 'afterkeydown'">
+	    </p>
+	</div>
 
-</div>    
+	<div data-bind="css: verdict" class="message centered">
+	    <div class="animated fadeIn correct">
+	        <p><i class="icon-ok"></i> correct</p>
+	    </div>
+	    <div class="animated fadeIn false">
+	        <p><i class="icon-remove"></i> nope</p>
+	    </div>
+	</div>
+
+	<div class="score"> 
+		<span data-bind="text: correctCount"></span> / <span data-bind="text: questionCount"></span>
+	</div>    
 
 </body>
 </html>

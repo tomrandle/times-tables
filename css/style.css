@@ -1,6 +1,14 @@
 body, html {
     margin:0;
     padding:0;
+    font-family: 'Open Sans', sans-serif;
+    background:#003333;
+    color:white;
+    font-size:32px;
+}
+
+:focus {
+    outline: 0;
 }
 
 p {
@@ -11,12 +19,7 @@ p {
     padding:0;
     margin:0;
 }
-body {
-    background:#003333;
-    color:white;
-    font-family:helvetica, arial;
-    font-size:2em;
-}
+
 .question {
     position:absolute;
     text-align:center;
@@ -30,13 +33,15 @@ body {
     font-size:0.5em;
 }
 input {
-    background: rgba(0, 0, 0, 0.4);
+    font-family: 'Open Sans', sans-serif;
+    background: none;
     padding:4px;
     border:none;
     color:white;
-    font-size:1em;
     display:inline;
-    width:3em;
+    width:2em;
+    border-bottom:1px solid silver;
+    font-size:32px;
 }
 .message {
     display: none;
@@ -55,10 +60,10 @@ input {
     display:block;
 }
 .correct {
-    background:green;
+    background:#07795d;
 }
 .false {
-    background:red;
+    background:#79071f;
 }
 /* Animation */
  .animated {

@@ -1,5 +1,10 @@
 window.onload = function() {
 
+    /*Set focus*/
+
+    document.getElementById("answer-box").focus();
+
+
     /* Generate Random Numbers */
 
     var timetableLimit = 12;
