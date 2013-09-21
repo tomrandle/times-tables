@@ -7,6 +7,8 @@ window.onload = function() {
 
     /* Generate Random Numbers */
 
+    var letterWidth = 16;
+
     var timetableLimit = 12;
     var a;
     var b;
@@ -37,6 +39,8 @@ window.onload = function() {
 
         var self = this;
 
+
+        self.inputWidth = ko.observable(letterWidth + "px");
         self.multipleA = ko.observable(a);
         self.multipleB = ko.observable(b);
         self.answer = ko.observable();
@@ -53,9 +57,16 @@ window.onload = function() {
         self.correctCount = ko.observable(0);
         self.questionCount = ko.observable(0);
 
+
+        self.answer.subscribe(function (answer)
+        {
+            self.inputWidth((answer.length * letterWidth) + letterWidth + "px");
+        });
+
         self.throttledAnswer.subscribe(function (answer) {
 
             if (answer) {
+
 
                 if (answer == a * b) {
                     score += 1;
