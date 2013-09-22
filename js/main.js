@@ -7,7 +7,7 @@ window.onload = function() {
 
     /* Generate Random Numbers */
 
-    var letterWidth = 16;
+    var letterWidth = 20;
 
     var timetableLimit = 12;
     var a;
@@ -58,9 +58,17 @@ window.onload = function() {
         self.questionCount = ko.observable(0);
 
 
-        self.answer.subscribe(function (answer)
-        {
-            self.inputWidth((answer.length * letterWidth) + letterWidth + "px");
+        self.answer.subscribe(function (answer) {
+
+            if (answer.length < 2) {
+                width = letterWidth;
+            }
+
+            else {
+                width = answer.length  * letterWidth;
+            }
+
+            self.inputWidth(width + "px");
         });
 
         self.throttledAnswer.subscribe(function (answer) {
